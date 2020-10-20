@@ -17,8 +17,8 @@ class ComponentRunAlone implements Plugin<Project> {
                         manifest.srcFile 'src/main/runalone/AndroidManifest.xml'
                     }
                 }
-                project.android.sourceSets.defaultConfig{
-                    applicationId project.ext.applicationId
+                project.android.sourceSets.defaultConfig {
+                    applicationId "com.wawj.${project.name}"
                 }
                 System.out.println("apply plugin is " + 'com.android.application')
                 //compileComponents(assembleTask, project)
