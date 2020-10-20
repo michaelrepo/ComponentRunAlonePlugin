@@ -1,0 +1,3 @@
+include ':runalone'
+include ':app'
+rootProject.name = "Run Alone Plugin"
