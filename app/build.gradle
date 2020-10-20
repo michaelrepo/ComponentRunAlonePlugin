@@ -1,11 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'module-run-alone'
 
-componentFeatures{
-    runAlone=false
-}
 
 android {
     compileSdkVersion 30
@@ -38,4 +34,5 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.android.tools.build:gradle:4.0.2'
 }
