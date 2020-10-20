@@ -1,5 +1,5 @@
 package com.michael.runalone;
 
 public class RunAloneExtension {
-    def runAlone = null
+    def runAlone = false
 }

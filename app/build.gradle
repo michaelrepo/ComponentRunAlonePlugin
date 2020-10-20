@@ -1,7 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-//apply plugin: 'module-run-alone'
+apply plugin: 'module-run-alone'
+
+componentFeatures{
+    runAlone=false
+}
 
 android {
     compileSdkVersion 30
@@ -34,6 +38,4 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.github.michaelrepo:ComponentRunAlonePlugin:1.0.3'
-    implementation 'com.github.hufeiyang.Android-AppLifecycleMgr:applifecycle-plugin:1.0.3'
 }
