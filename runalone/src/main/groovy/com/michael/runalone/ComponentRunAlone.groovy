@@ -6,8 +6,9 @@ import org.gradle.api.Project
 class ComponentRunAlone implements Plugin<Project> {
 
     void apply(Project project) {
+
         try {
-            boolean isRunAlone = project.ext.runAlone
+            boolean isRunAlone = project.rootProject.property("${project.name}_runalone")
 
             if (isRunAlone) {
                 project.apply plugin: 'com.android.application'
@@ -34,7 +35,7 @@ class ComponentRunAlone implements Plugin<Project> {
                 System.out.println("apply plugin is " + 'com.android.library')
             }
         } catch (Exception e) {
-            throw new RuntimeException("请确认您是否在${project.name}组件的build.gradle首行添加了“ ext{runAlone=false/true} ”，注意：一定要添加在文件首行")
+            throw new RuntimeException("请在根目录的gradle.properties添加:${project.name}_runalone = false/ture ")
         }
 
     }
